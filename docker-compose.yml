@@ -1,0 +1,7 @@
+version: 3.0
+services:
+  app:
+    build: .
+    restart: always
+    port:
+      - "1439:8080"
