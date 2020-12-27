@@ -3,15 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Boom Box</title>
+
+    <style>
+      main {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: flex-start;
+        width: 900px;
+        max-width: 100%;
+      }
+
+      main > div {
+        padding: 2rem;
+      }
+
+    </style>
+
 </head>
 <body>
     
-    <h1>Hello BOOM BOX</h1>
+    <main>
+  
+      <div>
+        <h3>Informations</h3>
+        <p class="game"> -- Game ID --</p>
+        <p class="pseudo">-- Mon Pseudo --</p>
+        <p class="adversaire">-- Le Pseudo de mon adversaire --</p>
+        <p class="combinaison">-- Derniere combinaison --</p>
+        <p class="index">-- Ma position --</p>
+        <p class="moi">-- Mon score --</p>
+        <p class="autre">-- Autre score --</p>
 
+      </div>
+  
+      <div>
+        <h3>Jouer</h3>
+        <div class="actions">
+          <button onclick="play('L')">L</button>
+          <button onclick="play('R')">R</button>
+          <button onclick="play('T')">T</button>
+          <button onclick="play('B')">B</button>
+        </div>
+      </div>
+
+      <div>
+        <h3>Creer une partie</h3>
+        <button onclick="createGame()">Create game</button>
+      </div>
+  
+      <div>
+        <h3>Rejoindre une partie</h3>
+        <div class="group">
+          <input id="gameId" type="text" placeholder="Game ID...">
+          <button onclick="joinGame()">Join Game</button>
+        </div>
+      </div>
+    </main>
+    
     <script src="/socket.io/socket.io.js"></script>
-    <script>
-      var socket = io();
-    </script>
-</body>
+    <script src="/public/script.js"></script>
+  </body>
 </html>
