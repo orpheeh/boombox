@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/public/graphics/shared/style/style.css">
     <link rel="stylesheet" href="/public/graphics/screens/accueil/accueil.css">
+    <link rel="stylesheet" href="/public/graphics/screens/accueil/game.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Play:wght@700&display=swap" rel="stylesheet">
@@ -28,7 +29,70 @@
     </main>
 
     <div class="boombox">
-        
+        <div class="wait">
+            <img id="jungle" src="/public/graphics/assets/jungle.png" alt="" class="all-width">
+            <p>Bienvenue <span class="boombox-pseudo"></span></p>
+            <p>En attente d'adversaire</p>
+            <p>Game ID</p>
+            <p class="boombox-gameid"></p>
+        </div>
+
+        <div class="game-panel">
+            <div class="boombox-top">
+                <div class="user">
+                    <p class="moi-pseudo">-- Mon pseudo --</p>
+                    <div class="moi">0</div>
+                </div>
+
+                <div class="user">
+                    <p class="autre-pseudo">-- Adversaire --</p>
+                    <div class="autre">0</div>
+                </div>
+            </div>
+
+            <div class="play-button-container">
+                <span class="icon play-button T"><img src="/public/graphics/assets/top.png" alt=""></span>
+                <div class="cross">
+                    <span class="icon play-button L"><img src="/public/graphics/assets/left.png" alt=""></span>
+                    <span class="icon play-button R"><img src="/public/graphics/assets/right.png" alt=""></span>
+                </div>
+                <span class="icon play-button B"><img src="/public/graphics/assets/bottom.png" alt=""></span>
+            </div>
+        </div>
+
+        <div class="modal" id="play-modal">
+            <div class="modal-container">
+                <div class="modal-title">
+                    C'est ton tour de jouer <br>
+                    Essaye de reproduire la séquence et ajoute une touche
+                </div>
+    
+                <div class="modal-content play-button-container">
+                    <span class="icon play-button" onclick="play('T')"><img src="/public/graphics/assets/top.png" alt=""></span>
+                    <div class="cross">
+                        <span class="icon play-button" onclick="play('L')"><img src="/public/graphics/assets/left.png" alt=""></span>
+                        <span class="icon play-button" onclick="play('R')"><img src="/public/graphics/assets/right.png" alt=""></span>
+                    </div>
+                    <span class="icon play-button" onclick="play('B')"><img src="/public/graphics/assets/bottom.png" alt=""></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal" id="win">
+            <div class="modal-container">
+                <div class="modal-title">
+                    Vous avez remporté cette battaille !
+                </div>
+            </div>
+        </div>
+
+        <div class="modal" id="lose">
+            <div class="modal-container">
+                <div class="modal-title">
+                    Vous avez perdu cette battaille !
+                </div>
+            </div>
+        </div>
     </div>
 
     <div class="modal" id="pseudo-modal">
@@ -39,7 +103,7 @@
             <div class="modal-content">
                 <p class="modal-message"></p>
                 <div class="form-group">
-                    <input type="text" placeholder="Indiquez votre pseudo">
+                    <input type="text" id="pseudo_input" placeholder="Indiquez votre pseudo">
                 </div>
             </div>
             <div class="modal-actions">
@@ -49,6 +113,9 @@
         </div>
     </div>
 
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/public/graphics/shared/script/boombox_client.js"></script>
+    <script src="/public/graphics/screens/accueil/game.js"></script>
     <script src="/public/graphics/screens/accueil/accueil.js"></script>
 </body>
 </html>

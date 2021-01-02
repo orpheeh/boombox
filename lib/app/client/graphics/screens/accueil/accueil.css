@@ -1,4 +1,4 @@
-#game {
+#game, .boombox {
     background: url(/public/graphics/assets/fond.jpg);
     background-size: cover;
     width: 900px;

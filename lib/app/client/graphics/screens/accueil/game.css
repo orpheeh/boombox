@@ -1,0 +1,84 @@
+.boombox {
+    display: none;
+}
+
+.show-boombox {
+    display: flex;
+    justify-content: center;
+}
+
+.wait, .game-panel {
+    display: none;
+}
+
+.show {
+    display: flex;
+}
+
+.wait {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.game-panel {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.game-panel .boombox-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    width: 100%;
+}
+
+.game-panel .user {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.wait p {
+    font-size: 1.1em;
+    padding: 0.5rem;
+}
+
+.boombox-gameid {
+    font-size: 1.5em;
+    color: black;
+}
+
+.play-button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.play img {
+    filter: grayscale(1.5);
+    transform: scale(0.75);
+}
+
+.play-button:hover {
+    filter: grayscale(1.5);
+}
+
+.play-button:active {
+    transform: scale(0.75);
+}
+
+.user p {
+    font-size: 1.7em;
+}
+
+.user div {
+    font-size: 1.4em;
+}
