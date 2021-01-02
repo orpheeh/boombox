@@ -1,0 +1,101 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Play', sans-serif;
+    font-weight: bold;
+    transition: 0.4s;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    height: 100h;
+}
+
+.icon {
+    display: inline-block;
+}
+
+.icon img {
+    width: 70%;
+}
+
+.icon:hover {
+    cursor: pointer;
+}
+
+.reverse {
+    transform: rotate(180deg);
+}
+
+.button {
+    font-size: 2em;
+    color: white;
+    background-color: green;
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 1rem 3rem;
+}
+
+.button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.ligth-button {
+    margin: 2rem;
+    color: white;
+    display: inline-block;
+    font-size: 1.5em;
+}
+
+.ligth-button:hover {
+    cursor: pointer;
+}
+
+.modal {
+    display: none;
+    text-align: center;
+}
+
+.show-modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(#000000cc, #000000cc);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.modal-container {
+    width: 300px;
+    min-width: 90%;
+    background: url(/public/graphics/assets/fond.jpg);
+    background-size: cover;
+    box-shadow: 1px 2px 5px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.modal-container > div {
+    padding: 2rem;
+}
+
+.modal-title {
+    font-size: 1.3em;
+}
+
+.modal .button {
+    font-size: 0.9em;
+    padding: 1rem;
+}

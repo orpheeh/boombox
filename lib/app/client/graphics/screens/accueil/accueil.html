@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/graphics/shared/style/style.css">
+    <link rel="stylesheet" href="/public/graphics/screens/accueil/accueil.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@700&display=swap" rel="stylesheet">
+    <title>Boom Box</title>
+</head>
+<body>
+    <main id="game">
+        <img id="jungle" src="/public/graphics/assets/jungle.png" alt="" class="all-width">
+
+        <img id="logo" src="/public/graphics/assets/logo.png" alt="" class="logo">
+        <span class="button" id="jouer" onclick="showGetStart()">Jouer</span>
+
+        <div class="getstart">
+            <div class="form-group">
+                <input type="text" id="partieid" placeholder="ID de la partie">
+            </div>
+            <span class="button" onclick="join()">Rejoindre une partie</span>
+            <span class="ligth-button" onclick="create()">Demarrer une nouvelle partie <i class="fas fa-chevron-right"></i> </span>
+        </div>
+
+    </main>
+
+    <div class="boombox">
+        
+    </div>
+
+    <div class="modal" id="pseudo-modal">
+        <div class="modal-container">
+            <div class="modal-title">
+                Votre pseudo
+            </div>
+            <div class="modal-content">
+                <p class="modal-message"></p>
+                <div class="form-group">
+                    <input type="text" placeholder="Indiquez votre pseudo">
+                </div>
+            </div>
+            <div class="modal-actions">
+                <span class="button" onclick="hidePseudoModal()">Annuler</span>
+                <span class="button" onclick="startGame()">OK</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="/public/graphics/screens/accueil/accueil.js"></script>
+</body>
+</html>
